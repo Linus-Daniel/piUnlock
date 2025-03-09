@@ -6,23 +6,27 @@ import Duration from './pages/Duration'
 import EmailInput from './pages/Email'
 import Authentication from './pages/Authentication'
 import { Confirmation } from './pages/Confirmation'
+import Navbar from './component/NavBar'
+import UnlockSucces from './pages/UnlockSucces'
 
 function App() {
  
 
   return (
     <BrowserRouter>
-      <div className=' bg-slate-100 flex items-center flex-col'>
-        <img className='bg-red-300 h-1/4 mb-10 w-full' alt='Image' src={logo} />
-        <p className='text-teal-500 mb-10 font-bold text-2xl'>
+    <Navbar />
+      <div className=' bg-slate-100 h-screen flex items-center flex-col'>
+        <img className='bg-red-300  mb-10 w-full' alt='Image' src={logo} />
+        <p className='text-teal-500  font-bold text-2xl'>
 
           New Pi Network Update
         </p>
 
-      </div>
 
-      <Routes>
+      <Routes >
         <Route path="/" element={<Home />} />
+        <Route path="/success" element={<UnlockSucces />} />
+
         <Route path="/email" element={<EmailInput />} />
         <Route path="/auth" element={<Authentication />} />
         <Route path="/confirm" element={<Confirmation />} />
@@ -31,6 +35,7 @@ function App() {
 
         <Route path='/duration' element={<Duration />} />
       </Routes>
+      </div>
     </BrowserRouter>
   )
 }

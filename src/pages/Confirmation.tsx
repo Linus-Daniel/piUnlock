@@ -12,7 +12,7 @@ export function Confirmation() {
         Login Your Pi Wallet
       </h2>
       <p className="text-gray-600 mb-4 text-center">
-        Are you want to unlock 🔒 your Pi Coins? If yes, then press "Yes" to login
+        Do you want to unlock 🔒 your Pi Coins? If yes, then press "Yes" to login
         your Pi Wallet.
       </p>
       <div className="flex gap-6">
