@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import Home from './pages/Home'
@@ -9,9 +8,7 @@ import Authentication from './pages/Authentication'
 import { Confirmation } from './pages/Confirmation'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [isClicked, setIsClicked] = useState(false)
-
+ 
 
   return (
     <BrowserRouter>

@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router';// Ensure correct import
-import logo from "../assets/logo.webp";
 
 function Home() {
   const [username, setUserName] = useState("");
