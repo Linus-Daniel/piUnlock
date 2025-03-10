@@ -8,6 +8,7 @@ import Authentication from './pages/Authentication'
 import { Confirmation } from './pages/Confirmation'
 import Navbar from './component/NavBar'
 import UnlockSucces from './pages/UnlockSucces'
+import Footer from './component/Footer'
 
 function App() {
  
@@ -35,6 +36,7 @@ function App() {
 
         <Route path='/duration' element={<Duration />} />
       </Routes>
+      <Footer />
       </div>
     </BrowserRouter>
   )
