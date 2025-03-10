@@ -16,7 +16,7 @@ function Home() {
 
   return (
     <main className="bg-slate-100 h- flex justify-center items-center">
-      <div className="flex flex-col items-center w-full max-w-md px-6">
+      <div className="flex flex-col items-center w-full max-w-full px-6">
         <p className="font-bold text-teal-600 mb-6 text-3xl text-center">
           Unlock Pi Coins
         </p>
